@@ -16,7 +16,12 @@ import (
 
 func main() {
 	// Initialize
-	erc20 := goerc20.New(goerc20.Config{ChainRpc: "CHAIN_RPC", Contract: "YOUR_CONTRACT_ADDRESS", Decimals: 18, PrivateKey: "YOUR_PRIVATE_KEY"})
+	erc20 := goerc20.New(goerc20.Config{
+		ChainRpc:   "CHAIN_RPC",
+		PrivateKey: "YOUR_PRIVATE_KEY",
+		Contract:   "YOUR_CONTRACT_ADDRESS",
+		Decimals:   18,
+	})
 
 	// Send Native Token
 	erc20.SendTo("TO_ADDRESS", 1)
